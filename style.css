@@ -55,11 +55,12 @@ h3   {
 
 }
 
-/* .joke 
+.joke {
 
     font-size: 30px;
     line-height: 40px;
     margin: 50px auto;
+    font-weight: bolder;
     max-width: 600px;
 
     -webkit-transition: opacity .5s ease-in-out;
@@ -72,7 +73,7 @@ h3   {
   line-height: 40px;
   margin: 50px auto;
   max-width: 600px;
-} */
+}
 
 .btn {
   background-color: #9f68e0;
