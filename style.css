@@ -96,6 +96,11 @@ h3   {
   outline: 0;
 }
 
+/* copy button */
+.copy_btn {
+  padding: 18px 20px;
+  margin-left: 10px;
+}
 
 .toggle {
   width: 4rem;
