@@ -10,9 +10,10 @@
 body {
   background-color: #C7F2A4;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  display: flex;
+  display: grid;
   /* it will center allign the items */
   align-items: center;
+  align-content: center;
   /* it will also center allign the elements */
   justify-content: center;
   /* it will center allign, otherwise it will be in left side */
@@ -32,8 +33,8 @@ body {
   padding: 50px 20px;
   /* what will be the size of the white box */
   max-width: 100%;
-  width: 700px;
   text-align: center;
+
 }
 
 h3 {
@@ -164,4 +165,9 @@ body.dark .lds-ring div {
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+@media screen {
+  
 }
