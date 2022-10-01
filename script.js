@@ -13,13 +13,19 @@ let getJoke = () => {
     fetch(url)
     .then(data => data.json())
     .then(item =>{
-      console.log(item);
         jokeContainer.textContent = `${item.joke}`;
         jokeContainer.classList.add("fade");
     });
 }
 btn.addEventListener("click",getJoke);
+getJoke();
   
+  // Fade in 
+  setTimeout(function(){ 
+     jokeEl.innerHTML = joke.joke; 
+      jokeEl.style.opacity = 1;
+  },500);
+     
 
 
 toggle.addEventListener("click", () => {
