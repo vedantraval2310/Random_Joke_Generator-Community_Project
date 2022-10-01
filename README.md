@@ -128,7 +128,7 @@ $ git fetch --all --prune
 $ git checkout main
 # Reset the local `main` branch to match the `upstream` repository's `main` branch
 $ git reset --hard upstream/main
-# Push changes to your forked `Your_Username` repo
+# Push changes to your forked `Random-Joke-Generator` repo
 $ git push origin main
 ```
 
