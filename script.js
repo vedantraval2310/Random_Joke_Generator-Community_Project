@@ -1,7 +1,7 @@
 
 const body = document.querySelector("body");
 const toggle = document.querySelector(".toggle");
-
+const copy = document.querySelector("#copy_joke");
 
 
 const jokeContainer = document.getElementById("joke");
@@ -34,3 +34,8 @@ toggle.addEventListener("click", () => {
     : (toggle.firstElementChild.className = "far fa-sun");
 });
  //master
+
+ copy.addEventListener("click", () => {
+  const text = jokeContainer.textContent;
+  navigator.clipboard.writeText(text);
+});
