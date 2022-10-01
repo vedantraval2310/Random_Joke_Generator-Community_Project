@@ -3,8 +3,9 @@
 /* import font */
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
     /* padding & border are in width & height */
+
 
 }
 
@@ -12,6 +13,7 @@ body {
   background:linear-gradient(90deg,#12c2e9, #c471ed, #f64f59);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: grid;
+position: inherit;
   font-family: 'Raleway', sans-serif;
   /* it will center allign the items */
   align-items: center;
@@ -39,8 +41,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 100px 20px;
   /* what will be the size of the white box */
   max-width: 100%;
+ 
+align-items: center;
+justify-content: center;
 
-  width: 900px;
+  width: 80vw;
   text-align: center;
   border-color: red rgba(170, 50, 220, .6) green;
   
@@ -229,12 +234,27 @@ body.dark .lds-ring div {
     border-radius: 10px;
     /* the curve in the corners */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
-    padding: 50px 20px;
+    padding: 15px 15px;
     /* what will be the size of the white box */
     max-width: 100%;
-    width: 700px;
+  
+   position: absolute;
+   align-items: center;
+    
     text-align: center;
     margin: 20px 35px;
+  }
+  .toggle{
+    width: 4rem;
+  height: 4rem;
+  background-color: #b9ec91;
+  position: initial;
+ 
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: rgba(135, 240, 87, 0.89) 0px 25px 50px -12px;
+  cursor: pointer;
   }
 }
 
