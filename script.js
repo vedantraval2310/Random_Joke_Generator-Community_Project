@@ -6,7 +6,7 @@ const copy = document.querySelector("#copy_joke");
 
 const jokeContainer = document.getElementById("joke");
 const btn = document.getElementById("btn");
-const url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
+const url = "https://icanhazdadjoke.com/";
 
 let getJoke = () => {
     jokeContainer.classList.remove("fade");
