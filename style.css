@@ -27,29 +27,44 @@ body {
 
 .container {
   background-color: azure;
-  border-radius: 10px;
+  border-radius: 40px;
   /* the curve in the corners */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
-  padding: 50px 20px;
+  padding: 100px 20px;
   /* what will be the size of the white box */
   max-width: 100%;
-  width: 700px;
+  width: 900px;
   text-align: center;
+  border-color: red rgba(170, 50, 220, .6) green;
+  
+  box-shadow: 10px 10px 20px rgba(251, 12, 12, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
 }
 
-h3 {
-  margin: 5;
-  letter-spacing: 4px;
+
+h3   {
+  margin: 250;
+  letter-spacing: 10px;
   opacity: 5;
 
 }
 
-.joke {
+/* .joke 
+
+    font-size: 30px;
+    line-height: 40px;
+    margin: 50px auto;
+    max-width: 600px;
+
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+
   font-size: 30px;
   line-height: 40px;
   margin: 50px auto;
   max-width: 600px;
-}
+} */
 
 .btn {
   background-color: #9f68e0;
@@ -60,9 +75,18 @@ h3 {
   cursor: pointer;
   /* cursor will change */
   font-size: 16px;
-  padding: 14px 40px;
+  padding: 20px 80px;
+  box-shadow: 1.2px 5px 5px rgb(9, 9, 9);
+  margin-top: 50px;
+ 
 }
-
+.btn:hover
+{
+  background-color: #a3d279;
+  font-weight: bold;
+  color: black;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
+}
 .btn:active {
   transform: scale(0.98);
   /* it will shrink while we click the button */
@@ -91,6 +115,10 @@ h3 {
   font-size: 2rem;
   color: #777;
 }
+.toggle i:hover {
+  font-size: 2.1rem;
+  color: rgb(41, 40, 40);
+}
 
 /* Dark mode styling*/
 body.dark {
@@ -113,10 +141,22 @@ body.dark .toggle i {
   color: #ffffff;
 }
 
+body.dark.toggle i:hover {
+  font-size: 2.1rem;
+  color: rgb(41, 40, 40);
+}
+
 body.dark .btn {
-  background-color: rgb(99, 94, 94);
+  background-color: rgb(75, 70, 70);
   box-shadow: 0 5px 15px rgba(255, 253, 253, 0.774), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
-  color: #fff;
+  color: rgb(255, 255, 255);
+}
+
+body.dark .btn:hover
+{
+  background-color: #a3d279;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
 }
 
 body.dark .lds-ring div {
@@ -167,6 +207,7 @@ body.dark .lds-ring div {
   }
 }
 
+
 @media only screen and (max-width: 600px) {
   .container {
     background-color: azure;
@@ -181,3 +222,4 @@ body.dark .lds-ring div {
     margin: 20px 35px;
   }
 }
+

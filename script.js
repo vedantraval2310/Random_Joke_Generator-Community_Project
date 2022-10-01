@@ -1,29 +1,36 @@
-const jokeEl = document.getElementById("joke"); // div id = joke
-const get_joke = document.getElementById("get_joke"); // button id = get_joke
+
 const body = document.querySelector("body");
 const toggle = document.querySelector(".toggle");
-get_joke.addEventListener("click", generateJoke);
-generateJoke();
 
-async function generateJoke() {
-  // async makes a function return a Promise
-  // call the icanhaz API
-  var loading = document.getElementById("loading");
-  loading.style.visibility = "visible";
-  const jokeRes = await fetch("https://icanhazdadjoke.com/", {
-    // await makes a function wait for a Promise
-    headers: {
-      Accept: "application/json",
-    },
-  });
 
-  const joke = await jokeRes.json(); // save
-  loading.style.visibility = "hidden";
 
-  jokeEl.innerHTML = joke.joke;
+const jokeContainer = document.getElementById("joke");
+const btn = document.getElementById("btn");
+const url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
+
+let getJoke = () => {
+    jokeContainer.classList.remove("fade");
+    fetch(url)
+    .then(data => data.json())
+    .then(item =>{
+        jokeContainer.textContent = `${item.joke}`;
+        jokeContainer.classList.add("fade");
+    });
 }
+btn.addEventListener("click",getJoke);
+getJoke();
+  
+  // Fade in 
+  setTimeout(function(){ 
+     jokeEl.innerHTML = joke.joke; 
+      jokeEl.style.opacity = 1;
+  },500);
+     
+
+
 toggle.addEventListener("click", () => {
   body.classList.toggle("dark")
     ? (toggle.firstElementChild.className = "far fa-moon")
     : (toggle.firstElementChild.className = "far fa-sun");
 });
+ //master
