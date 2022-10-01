@@ -10,10 +10,12 @@
 
 body {
   background-color: #C7F2A4;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: grid;
   font-family: 'Raleway', sans-serif;
-  display: flex;
   /* it will center allign the items */
   align-items: center;
+  align-content: center;
   /* it will also center allign the elements */
   justify-content: center;
   /* it will center allign, otherwise it will be in left side */
@@ -32,6 +34,7 @@ body {
   padding: 100px 20px;
   /* what will be the size of the white box */
   max-width: 100%;
+
   width: 900px;
   text-align: center;
   border-color: red rgba(170, 50, 220, .6) green;
@@ -211,6 +214,7 @@ body.dark .lds-ring div {
     transform: rotate(360deg);
   }
 }
+
 
 
 @media only screen and (max-width: 600px) {
