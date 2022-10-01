@@ -43,7 +43,19 @@ h3 {
 
 }
 
-.joke {
+.joke 
+//add-transition
+    font-size: 30px;
+    line-height: 40px;
+    margin: 50px auto;
+    max-width: 600px;
+
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+
   font-size: 30px;
   line-height: 40px;
   margin: 50px auto;
