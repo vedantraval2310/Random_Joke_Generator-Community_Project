@@ -19,7 +19,25 @@ async function generateJoke() {
 
   const joke = await jokeRes.json(); // save
   loading.style.visibility = "hidden";
+//add-transition
 
+        }
+    });
+
+    const joke = await jokeRes.json();  // save     
+
+      // Fade out
+      jokeEl.style.opacity = 0;
+  
+  // Fade in 
+  setTimeout(function(){ 
+     jokeEl.innerHTML = joke.joke; 
+      jokeEl.style.opacity = 1;
+  },500);
+     
+
+
+}
   jokeEl.innerHTML = joke.joke;
 }
 toggle.addEventListener("click", () => {
@@ -27,3 +45,4 @@ toggle.addEventListener("click", () => {
     ? (toggle.firstElementChild.className = "far fa-moon")
     : (toggle.firstElementChild.className = "far fa-sun");
 });
+ //master
