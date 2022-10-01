@@ -16,7 +16,15 @@ async function generateJoke(){  // async makes a function return a Promise
 
     const joke = await jokeRes.json();  // save     
 
- 
-    jokeEl.innerHTML = joke.joke;    
-}
+      // Fade out
+      jokeEl.style.opacity = 0;
+  
+  // Fade in 
+  setTimeout(function(){ 
+     jokeEl.innerHTML = joke.joke; 
+      jokeEl.style.opacity = 1;
+  },500);
+     
 
+
+}
