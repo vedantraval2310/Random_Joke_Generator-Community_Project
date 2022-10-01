@@ -6,3 +6,4 @@ A static web page which is made with the help of HTML, CSS and Javascript. The j
 
 https://user-images.githubusercontent.com/71392444/156401123-29721261-f34a-4d26-92b5-d1968b7ee225.mp4
 
+The jokes are of the topic named as one liner and irony. This project are of many kinds and this project can be used in playschools, for educational purposes, relaxation and so on.
