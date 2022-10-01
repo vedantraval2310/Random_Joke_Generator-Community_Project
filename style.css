@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 /* import font */
 
 * {
@@ -9,7 +10,7 @@
 
 body {
   background-color: #C7F2A4;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   display: flex;
   /* it will center allign the items */
   align-items: center;
@@ -163,5 +164,20 @@ body.dark .lds-ring div {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    background-color: azure;
+    border-radius: 10px;
+    /* the curve in the corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
+    padding: 50px 20px;
+    /* what will be the size of the white box */
+    max-width: 100%;
+    width: 700px;
+    text-align: center;
+    margin: 20px 35px;
   }
 }
