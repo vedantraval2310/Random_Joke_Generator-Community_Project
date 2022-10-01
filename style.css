@@ -44,7 +44,7 @@ h3 {
 }
 
 .joke 
-//add-transition
+/* add-transition */
     font-size: 30px;
     line-height: 40px;
     margin: 50px auto;
