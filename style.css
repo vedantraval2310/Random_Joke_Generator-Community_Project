@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 /* import font */
 
 * {
@@ -11,6 +12,7 @@ body {
   background-color: #C7F2A4;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: grid;
+  font-family: 'Raleway', sans-serif;
   /* it will center allign the items */
   align-items: center;
   align-content: center;
@@ -27,25 +29,29 @@ body {
 
 .container {
   background-color: azure;
-  border-radius: 10px;
+  border-radius: 40px;
   /* the curve in the corners */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
-  padding: 50px 20px;
+  padding: 100px 20px;
   /* what will be the size of the white box */
   max-width: 100%;
-  text-align: center;
 
+  width: 900px;
+  text-align: center;
+  border-color: red rgba(170, 50, 220, .6) green;
+  
+  box-shadow: 10px 10px 20px rgba(251, 12, 12, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
 }
 
-h3 {
-  margin: 5;
-  letter-spacing: 4px;
+
+h3   {
+  margin: 250;
+  letter-spacing: 10px;
   opacity: 5;
 
 }
 
-.joke 
-/* add-transition */
+/* .joke 
+
     font-size: 30px;
     line-height: 40px;
     margin: 50px auto;
@@ -61,7 +67,7 @@ h3 {
   line-height: 40px;
   margin: 50px auto;
   max-width: 600px;
-}
+} */
 
 .btn {
   background-color: #9f68e0;
@@ -72,7 +78,10 @@ h3 {
   cursor: pointer;
   /* cursor will change */
   font-size: 16px;
-  padding: 14px 40px;
+  padding: 20px 80px;
+  box-shadow: 1.2px 5px 5px rgb(9, 9, 9);
+  margin-top: 50px;
+ 
 }
 .btn:hover
 {
@@ -90,6 +99,11 @@ h3 {
   outline: 0;
 }
 
+/* copy button */
+.copy_btn {
+  padding: 18px 20px;
+  margin-left: 10px;
+}
 
 .toggle {
   width: 4rem;
@@ -198,6 +212,23 @@ body.dark .lds-ring div {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    background-color: azure;
+    border-radius: 10px;
+    /* the curve in the corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
+    padding: 50px 20px;
+    /* what will be the size of the white box */
+    max-width: 100%;
+    width: 700px;
+    text-align: center;
+    margin: 20px 35px;
   }
 }
 
