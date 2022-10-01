@@ -91,7 +91,7 @@ origin  https://github.com/Your_Username/Random-Joke-Generator.git (fetch)
 origin  https://github.com/Your_Username/Random-Joke-Generator.git (push)
 ```
 
-Now, let's add a reference to the original [Hacktoberfest-2022](https://github.com/Chirantanbanik/Random-Joke-Generator) repository using
+Now, let's add a reference to the original [Random-Joke-Generator](https://github.com/Chirantanbanik/Random-Joke-Generator) repository using
 
 ```sh
 $ git remote add upstream https://github.com/Chirantanbanik/Random-Joke-Generator.git
@@ -104,16 +104,16 @@ See the changes using
 $ git remote -v
 origin    https://github.com/Your_Username/Random-Joke-Generator.git (fetch)
 origin    https://github.com/Your_Username/Random-Joke-Generator.git (push)
-upstream  https://github.com/Remote_Username/Random-Joke-Generator.git (fetch)
-upstream  https://github.com/Remote_Username/Random-Joke-Generator.git (push)
+upstream  https://github.com/Your_Username/Random-Joke-Generator.git (fetch)
+upstream  https://github.com/Your_Username/Random-Joke-Generator.git (push)
 ```
-`In your case, you will see
+In your case, you will see
 ```sh
 $ git remote -V
 origin    https://github.com/Your_Username/Random-Joke-Generator.git (fetch)
 origin    https://github.com/Your_Username/Random-Joke-Generator.git (push)
-upstream  https://github.com/kishanrajput23/Random-Joke-Generator.git (fetch)
-upstream  https://github.com/kishanrajput23/Random-Joke-Generator.git (push)
+upstream  https://github.com/Your_Username/Random-Joke-Generator.git (fetch)
+upstream  https://github.com/Your_Username/Random-Joke-Generator.git (push)
 ```
 
 ### 4. Sync it :recycle:
@@ -128,7 +128,7 @@ $ git fetch --all --prune
 $ git checkout main
 # Reset the local `main` branch to match the `upstream` repository's `main` branch
 $ git reset --hard upstream/main
-# Push changes to your forked `Hacktoberfest-2021` repo
+# Push changes to your forked `Your_Username` repo
 $ git push origin main
 ```
 
