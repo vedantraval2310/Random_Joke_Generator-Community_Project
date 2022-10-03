@@ -1,20 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* import font */
 
 * {
   box-sizing: border-box;
-    /* padding & border are in width & height */
+  /* padding & border are in width & height */
 
 
 }
 
 body {
-  background:linear-gradient(90deg,#12c2e9, #c471ed, #f64f59);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
   display: grid;
-position: inherit;
-  font-family: 'Raleway', sans-serif;
+  position: inherit;
+  font-family: 'Montserrat', sans-serif;
   /* it will center allign the items */
   align-items: center;
   align-content: center;
@@ -29,31 +30,40 @@ position: inherit;
 }
 
 
-.container {
-  background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-  border-radius: 40px;
-  /* the curve in the corners */
-  padding: 100px 20px;
-  /* what will be the size of the white box */
-  max-width: 100%;
- 
-align-items: center;
-justify-content: center;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
 
-  width: 80vw;
-  text-align: center;
-  border-color: red rgba(170, 50, 220, .6) green;
-  
-  box-shadow: 10px 10px 20px rgba(251, 12, 12, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
-h3   {
+.container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 2px solid rgba(177, 177, 177, 0.18);
+  border-radius: 40px;
+  padding: 100px 20px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  text-align: center;
+  border-color: rgba(176, 176, 176, .5);
+  transition: all 0.5s ease-in-out;
+}
+
+
+h3 {
   margin: 250;
   letter-spacing: 10px;
   opacity: 5;
@@ -62,17 +72,17 @@ h3   {
 
 .joke {
 
-    font-size: 30px;
-    line-height: 40px;
-    margin: 50px auto;
-    font-weight: bolder;
-    max-width: 600px;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 50px auto;
+  font-weight: normal;
+  max-width: 600px;
 
-    -webkit-transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    -ms-transition: opacity .5s ease-in-out;
-    -o-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
 
   font-size: 30px;
   line-height: 40px;
@@ -84,23 +94,21 @@ h3   {
   background-color: #9f68e0;
   border: 0;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
   color: #fff;
   cursor: pointer;
-  /* cursor will change */
   font-size: 16px;
   padding: 20px 80px;
-  box-shadow: 1.2px 5px 5px rgb(9, 9, 9);
   margin-top: 50px;
- 
+  transition: all 0.2s ease-in-out;
 }
-.btn:hover
-{
+
+.btn:hover {
   background-color: #a3d279;
   font-weight: bold;
   color: black;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
 }
+
 .btn:active {
   transform: scale(0.98);
   /* it will shrink while we click the button */
@@ -132,8 +140,9 @@ h3   {
 
 .toggle i {
   font-size: 2rem;
-  color: #777;
+  color: #111;
 }
+
 .toggle i:hover {
   font-size: 2.1rem;
   color: rgb(41, 40, 40);
@@ -146,9 +155,10 @@ body.dark {
 }
 
 body.dark .container {
-  background-color: rgb(21, 29, 29);
-  box-shadow: 0 10px 20px rgba(231, 228, 228, 0.925), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
-
+  background-color: rgba(21, 29, 29, .55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-color: transparent;
 }
 
 body.dark .toggle {
@@ -166,13 +176,12 @@ body.dark.toggle i:hover {
 }
 
 body.dark .btn {
-  background-color: rgb(75, 70, 70);
+  background-color: #111;
   box-shadow: 0 5px 15px rgba(255, 253, 253, 0.774), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
   color: rgb(255, 255, 255);
 }
 
-body.dark .btn:hover
-{
+body.dark .btn:hover {
   background-color: #a3d279;
   color: rgb(0, 0, 0);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
@@ -230,31 +239,32 @@ body.dark .lds-ring div {
 
 @media only screen and (max-width: 600px) {
   .container {
-    background-color: azure;
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 10px;
-    /* the curve in the corners */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0, 0.1);
     padding: 15px 15px;
-    /* what will be the size of the white box */
     max-width: 100%;
-  
-   position: absolute;
-   align-items: center;
-    
+    display: grid;
+    position: absolute;
+    align-items: center;
+
     text-align: center;
     margin: 20px 35px;
   }
-  .toggle{
+
+  .toggle {
     width: 4rem;
-  height: 4rem;
-  background-color: #b9ec91;
-  position: initial;
- 
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  box-shadow: rgba(135, 240, 87, 0.89) 0px 25px 50px -12px;
-  cursor: pointer;
+    height: 4rem;
+    background-color: #b9ec91;
+    position: initial;
+
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: rgba(135, 240, 87, 0.89) 0px 25px 50px -12px;
+    cursor: pointer;
   }
 }
 
+.heading {
+  font-weight: bold;
+}
