@@ -22,7 +22,7 @@
 
 ## **You can check the App from:** [here](https://chirantanbanik.github.io/Random-Joke-Generator/)
 
-A static web page which is made with the help of HTML, CSS and Javascript. The jokes are generated with the help of an API call. 
+A static web page which is made with the help of HTML, CSS and Javascript. The jokes are generated with the help of an API call. The demo that you underneath is the initial project that was made.
 
 https://user-images.githubusercontent.com/71392444/156401123-29721261-f34a-4d26-92b5-d1968b7ee225.mp4
 
