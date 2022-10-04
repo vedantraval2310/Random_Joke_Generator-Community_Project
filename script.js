@@ -26,15 +26,18 @@ let getJoke = () => {
       if(!window.navigator.onLine){
         jokeContainer.textContent = "Error: Your browser is offline. \nPlease try again with internet connection.";
       }else{
-        jokeContainer.textContent = "Some Error Occurred: "+ error + "\n Please try again";
+        jokeContainer.textContent = "Some Error Occurred: "+ error + ".\n Please try again";
         jokeContainer.classList.add("fade");
       }
     });    
 
 }
 // * whenever user gets online again, dont show him/her the user offline error, instead show him joke
-  // window.addEventListener('online', () => {if(!window.onload){getJoke()}});
-  window.addEventListener('online', () => {getJoke()});
+  window.addEventListener('online', () => {
+    // ! check if there's no error happening before browser becomes online again, only in that case getJoke, else remain joke as it is
+    // if(jokeContainer.textContent != regex(/^Some\sError\sOccurred\W/)){getJoke()};
+    getJoke()
+  });
 
 btn.addEventListener("click", getJoke);
 getJoke();
