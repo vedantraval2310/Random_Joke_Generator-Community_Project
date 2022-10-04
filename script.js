@@ -2,7 +2,7 @@
 const body = document.querySelector("body");
 const toggle = document.querySelector(".toggle");
 const copy = document.querySelector("#copy_joke");
-
+const popup=document.querySelector(".copy-popup");
 
 const jokeContainer = document.getElementById("joke");
 
@@ -45,6 +45,10 @@ toggle.addEventListener("click", () => {
 copy.addEventListener("click", () => {
   const text = jokeContainer.textContent;
   navigator.clipboard.writeText(text);
+  popup.classList.add("fade-in-image");
+  setTimeout(function() {
+    popup.classList.remove("fade-in-image");
+  },3000);
   copy.querySelector("i").className = "fa-solid fa-check"
   setTimeout(function () {
     copy.querySelector("i").className = "fa-regular fa-copy"
